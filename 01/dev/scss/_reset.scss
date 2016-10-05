@@ -1,0 +1,188 @@
+//colors
+$white: #fff;
+$black: #000;
+
+//@extend-elements
+//original selectors
+//input, textarea, select
+%extend_1 {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    color: inherit;
+}
+
+//original selectors
+//form, menu, iframe
+%extend_2 {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+//original selectors
+//ol, ul, dl, li, dt, dd
+%extend_3 {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+//original selectors
+//h1, h2, h3, h4, h5, h6
+%extend_4 {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+//original selectors
+//.clearfix:before, .clearfix:after
+%extend_5 {
+    display: table;
+    line-height: 0;
+    content: '';
+}
+
+
+@charset "utf-8";
+* {
+    outline: none;
+}
+html {
+    height: 100%;
+    * {
+        padding: 0;
+        margin: 0;
+				box-sizing: border-box;
+    }
+}
+body {
+    min-height: 100%;
+    font-size: 100%;
+    background: $white;
+    color: $black;
+    position: relative;
+}
+header {
+    display: block;
+}
+nav {
+    display: block;
+}
+section {
+    display: block;
+}
+article {
+    display: block;
+}
+aside {
+    display: block;
+}
+footer {
+    display: block;
+}
+time {
+    display: block;
+}
+input {
+    @extend %extend_1;
+}
+textarea {
+    @extend %extend_1;
+}
+select {
+    @extend %extend_1;
+}
+form {
+    @extend %extend_2;
+}
+menu {
+    @extend %extend_2;
+}
+iframe {
+    @extend %extend_2;
+}
+ol {
+    @extend %extend_3;
+}
+ul {
+    @extend %extend_3;
+}
+dl {
+    @extend %extend_3;
+}
+li {
+    @extend %extend_3;
+}
+dt {
+    @extend %extend_3;
+}
+dd {
+    @extend %extend_3;
+}
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    border: 0;
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+h1 {
+    @extend %extend_4;
+}
+h2 {
+    @extend %extend_4;
+}
+h3 {
+    @extend %extend_4;
+}
+h4 {
+    @extend %extend_4;
+}
+h5 {
+    @extend %extend_4;
+}
+h6 {
+    @extend %extend_4;
+}
+p {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+.clearfix {
+    &:before {
+        @extend %extend_5;
+    }
+    &:after {
+        @extend %extend_5;
+        clear: both;
+    }
+}
+.clear {
+    clear: both;
+    font-size: 1px;
+    line-height: 1px;
+    height: 0;
+    overflow: hidden;
+}
+.juster {
+    display: inline-block;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+}
+.vfix {
+    height: 100%;
+    width: 0;
+    display: inline-block;
+    vertical-align: middle;
+}

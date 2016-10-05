@@ -3,3 +3,5 @@
 .sass-cache/
 *.css.map
 .idea/
+/01/PSD/
+/01/node_modules/
