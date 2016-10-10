@@ -1,0 +1,376 @@
+@import 'normalize.styl'
+@import 'nib'
+@import 'font-awesome.styl'
+@import '../bower_components/bootstrap-stylus/index.styl'
+
+/* =============================================================================
+   Variables
+   ========================================================================== */
+
+bg-color = #4A6679
+font-color = #475055
+mentol-color = #56CCC8
+ligth-grey = #B2B9BD
+selection-bg = #ffffff
+link-color = inherit
+link-visited = inherit
+link-hover = inherit
+
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/* ==========================================================================
+  Base styles: opinionated defaults
+  ========================================================================== */
+
+html
+  color font-color
+  font-size: 1em
+  line-height 1.4
+
+::-moz-selection
+  background selection-bg
+  text-shadow: none
+
+::selection
+  background selection-bg
+  text-shadow: none
+
+hr
+  display block
+  height 1px
+  border 0
+  border-top 1px solid #ccc
+  margin 0
+  padding 0
+
+fieldset
+  border 0
+  margin 0
+  padding 0
+
+textarea
+  resize vertical
+
+/* ==|== Author's custom styles ===============================================
+   ========================================================================== */
+
+
+.stas-base64
+  width 67px
+  height 67px
+  background inline-image('../img/stas.jpg')
+
+
+/*! END Site style*/
+
+/* ==========================================================================
+  Helper classes
+  ========================================================================== */
+
+.hidden
+  display none !important
+  visibility hidden
+
+.visuallyhidden
+  border 0
+  clip rect(0 0 0 0)
+  height 1px
+  margin -1px
+  overflow hidden
+  padding 0
+  position absolute
+  width 1px
+
+.visuallyhidden.focusable:active
+.visuallyhidden.focusable:focus
+  clip auto
+  height auto
+  margin 0
+  overflow visible
+  position static
+  width auto
+
+.invisible
+  visibility hidden
+
+.clearfix:before
+.clearfix:after
+  content " "
+  display table
+
+.clearfix
+  &:after
+    clear both
+
+@media print
+  *
+    background transparent !important
+    color #000 !important // Black prints faster: h5bp.com/s
+    box-shadow none !important
+    text-shadow none !important
+
+a
+a:visited
+  text-decoration underline
+
+a 
+a:hover 
+  text-decoration none
+  color font-color
+
+a[href]:after
+  content " (" attr(href) ")"
+
+abbr[title]:after
+  content " (" attr(title) ")"
+
+// Don't show links for images, or javascript/internal links
+a[href^="javascript:"]:after
+a[href^="#"]:after
+  content ""
+
+pre,
+blockquote
+  border 1px solid #999
+  page-break-inside avoid
+
+thead
+  display table-header-group
+
+tr
+img
+  page-break-inside avoid
+
+img
+  max-width 100% !important
+
+p
+h2
+h3
+  orphans 3
+  widows 3
+
+h2
+h3
+  page-break-after avoid
+
+// myStyle
+body
+  background-color bg-color
+  font-family 'Roboto', sans-serif
+  color font-color
+  font-size 16px
+  padding-bottom 80px
+.pr7px
+  padding-right 7px
+.pl7px
+  padding-left 7px
+.pr0
+  padding-right 0
+.pl0
+  padding-left 0
+@media (max-width: 992px)
+  .pr7px
+    padding-right 15px
+  .pl7px
+    padding-left 15px
+  .pr0
+    padding-right 15px
+  .pl0
+    padding-left 15px
+@media (min-width: 1200px)
+  .container
+      width 960px
+.top-nav
+  margin-top 106px
+  background-color selection-bg
+  border-radius 0
+  border none
+  min-height 60px
+  margin-bottom 15px
+  .navbar-right a 
+    color #B2B9BD
+      
+  li
+    .li-border
+      height 60px
+      width 1px
+      background-color #DDE2E4
+    a 
+      line-height 30px
+      padding 15px 20px
+  .navbar-brand
+    float left
+    padding 0 19px
+    font-size 26px
+    line-height 60px
+    height 60px
+    background-color mentol-color
+    color selection-bg
+    margin-right 30px
+
+.list-group-item:last-child   
+.list-group-item:first-child 
+  border-radius 0  
+
+.list-group 
+  float left
+  width 50%
+  margin-bottom 0
+  a 
+    padding: 17px 15px
+    i 
+      font-size 25px
+
+.submenu
+  float left
+  width 50%
+  .item 
+    background-color #152840
+    font-size 15px
+    line-height 30px
+    margin-bottom 1px
+    padding 17px 0 17px 33px
+    &.active
+      background-color #263A54
+    .title 
+      color mentol-color
+      font-size 16px
+      margin-bottom 5px
+      position relative
+      &:after
+        content ""
+        width 18px
+        height 20px
+        position absolute
+        right 20px
+        top 4px
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAUCAYAAACAl21KAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MzRCNjkyQzM4RTVBMTFFNjgxODNGNzQzMzFFMjFBRTkiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MzRCNjkyQzQ4RTVBMTFFNjgxODNGNzQzMzFFMjFBRTkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDozNEI2OTJDMThFNUExMUU2ODE4M0Y3NDMzMUUyMUFFOSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDozNEI2OTJDMjhFNUExMUU2ODE4M0Y3NDMzMUUyMUFFOSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PnQ2iksAAAF4SURBVHjajJQ7L0RBFMd3L4lHsQWLIB5hC4lq46MIsR5ReZSIUOg0ik3QCdHIBtliK19CIaEQFB5rRcSyBSEeBf4n+V+ZTO65Oyf5JSd3zv3dOzNnJjp4dBhxiCj4DSvwlOftYB6cU/ADLsEsaHER1YA9cAvSoMcY6war4B5kQLUmagB5kHKY6ii4BnW2SOxnoNF64TtE1gxOQJUp2gJxqzDLD3SAN0XWBjZ9kZjHAoryXOgCSIBXRTYuPyGiEaVgEUwzfwRd4Fmp7RfRUMg6bIAZ5iX+2UNAXUpEfWV2aA0sMX+xWsKPpBeykGZUGHlQh7+L6LSMRLp5mXmM3W7HsYhyIZIJsM68HlyB1oC6AxHtKpIVsM28iZ0cV2pzHnchEzCY4KnvpCSmSHbAk9/ZkwE9MsBTfwNqFckdmDKPyCfoBcWIe8hMkuDLPv1FTiPrINlnp5e0++iDnS4HdQFcGGMyxTnu2jBn8R+VyhcLvNjSrlftnwADAAmNSdyhPHQsAAAAAElFTkSuQmCC") top center no-repeat
+    .li-item 
+      a
+        color #ffffff
+        line-height 30px
+.contact-list
+  position relative
+  background-color #C5CDD1
+  color #fff
+  min-height 241px
+  margin-bottom 16px
+
+.red-block {
+  background-color red
+  min-height 240px
+}
+.social-menu {
+  background-color #fff
+  color #475055
+  min-height 316px
+}
+.widget
+  min-height 150px
+  color #fff
+  margin-bottom 16px
+  &.facebook
+    background-color #4D6BAA
+  &.twitter
+    background-color #4FC6F8
+.sign-in
+  background-color #fff
+  color #475055
+  text-align center
+  min-height 160px
+  margin-bottom 16px
+  a.soc-btn
+    background-color #4D6BAA
+    width 30px
+    line-height 30px
+    display inline-block
+    border-radius 50%
+    margin 0 10px
+    color #fff
+// ==================================.container==================================
+.carousel 
+  position relative
+  min-height 453px
+  margin-bottom 16px
+.carousel-inner > .item > img
+  width 100%
+  max-height 453px
+.post1
+  min-height 300px
+  background-color #fff
+  margin-bottom 16px
+  a  
+    color #ea6060
+.post-video
+  min-height 300px
+  background-color #fff
+  margin-bottom 16px
+  position relative
+  background-color #787878
+  .share 
+    position absolute
+    left 0
+    top 0
+    width 25%
+    height 100%
+    background-color #1F3045
+    color #fff
+    a 
+      display block
+      color #fff
+  iframe
+    min-height 300px
+    width 100%
+.post2
+  background-color #1F3045
+  color #fff
+  min-height 300px
+  text-align center
+  margin-bottom 16px
+  & > div
+    display inline-block
+    margin-top 45%
+.grey-cube
+  background-color #787878
+  min-height 300px
+  margin-bottom 16px
+.latest-tweets {
+  min-height 439px
+  background-color #4FC6F8
+  margin-bottom 16px
+  color #fff
+}
+.whats-hot
+  background-color #fff
+  min-height 534px
+  margin-bottom 16px
+.hot-item 
+  .img
+    width 71px
+    height 71px
+    background-color #787878
+.form-block
+  background-color #fff
+  height 381px
+  margin-bottom 16px
+  padding 0 15px
+.view-more-stories
+  min-height 300px
+  background-color #ea6060
+  color #fff
+  margin-bottom 16px
+.post-new-detail
+  min-height 300px
+  background-color #787878
+.post-detail
+  min-height 300px
+  background-color #fff
+  margin-bottom 16px
+.quote
+  min-height 149px
+  margin-bottom 16px
+  background-color #fff
+.tabs-wrapp 
+  min-height 289px
+  background-color #fff 
