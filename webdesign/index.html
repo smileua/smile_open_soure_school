@@ -4,18 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet/less" type="text/css" href="less/style.less">
+  <script type="text/javascript" src="js/less.js"></script>
   <title>Web Design</title>
 </head>
 <body>
   <header class="header">
-    <div class="header__top">
-      <div>
-        <a href="#">
-          <img src="" alt="">
-        </a>
+    <div class="header__top text_center clearfix">
+      <div class="header__logo">
+        <a href="#"></a>
       </div>
-      <nav>
-        <ul>
+      <nav class="main__menu">
+        <ul class="clearfix">
           <li>
             <a href="#">Home</a>
           </li>
@@ -27,91 +27,104 @@
           </li>
         </ul>
       </nav>
-      <div>
-        <span></span>
-        <input type="search">
+      <div class="toggle__menu">
+        <span class="toggle__top"></span>
+        <span class="toggle__mid"></span>
+        <span class="toggle__bot"></span>
       </div>
-      <div class="toggle__menu"></div>
+      <div class="header__search">
+        <i class="fa fa-search"></i>
+        <input type="text" placeholder="Write here">
+      </div>
     </div>
-    <div>
-      <h2>Web design</h2>
-      <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum , ut fermentum massa justo sit amet erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-      <a href="#">Really?</a>
-      <a href="#" class="play__btn"></a>
+    <div class="header__content text_center">
+      <h2 class="header__title">Web design</h2>
+      <p class="header__descr">
+        <span class="new_line">Fusce dapibus, tellus ac cursus commodo, tortor mauris </span>
+        <span class="new_line">condimentum , ut fermentum massa justo sit amet </span>
+        <span class="new_line">erat a ante venenatis dapibus posuere velit </span>
+      </p>
+      <div class="header__btn">
+        <a href="#" class="info__btn">Really?</a>
+      </div>
+      <a href="#" class="play__btn"><span class="icon_play"></span></a>
     </div>
   </header>
-  <div>
-    <a href="#">
+  <div class="content clearfix">
+    <a href="#" class="content__item">
       <figure>
-        <img src="" alt="">
-        <figcaption>
-          <span>Amet Condimentum</span>
-          <span>Dolor</span>
+        <img src="img/content_img1.jpg" alt="">
+        <figcaption class="item__descr text_center">
+          <span class="item__title">Amet Condimentum</span>
+          <span class="item__subtitle">Dolor</span>
         </figcaption>
       </figure>
     </a>
-    <a href="#">
+    <a href="#" class="content__item">
       <figure>
-        <img src="" alt="">
-        <figcaption>
-          <span>Lorem Cursus</span>
-          <span>Ligula</span>
+        <img src="img/content_img2.jpg" alt="">
+        <figcaption class="item__descr text_center">
+          <span class="item__title">Lorem Cursus</span>
+          <span class="item__subtitle">Ligula</span>
         </figcaption>
       </figure>
     </a>
-    <a href="#">
+    <a href="#" class="content__item">
       <figure>
-        <img src="" alt="">
-        <figcaption>
-          <span>Condimentum Ultricies</span>
-          <span>Consectetur</span>
+        <img src="img/content_img3.jpg" alt="">
+        <figcaption class="item__descr text_center">
+          <span class="item__title">Condimentum Ultricies</span>
+          <span class="item__subtitle">Consectetur</span>
         </figcaption>
       </figure>
     </a>
-    <a href="#">
+    <a href="#" class="content__item">
       <figure>
-        <img src="" alt="">
-        <figcaption>
-          <span>Ridiculus Ornare</span>
-          <span>Ullamcorper</span>
+        <img src="img/content_img4.jpg" alt="">
+        <figcaption class="item__descr text_center">
+          <span class="item__title">Ridiculus Ornare</span>
+          <span class="item__subtitle">Ullamcorper</span>
         </figcaption>
       </figure>
     </a>
   </div>
   <footer class="footer">
-    <div>
-      <ul>
-        <li>Follow us</li>
+    <div class="footer__top clearfix">
+      <ul class="footer__menu">
+        <li class="f-menu__title">Follow us</li>
         <li><a href="#">Twitter</a></li>
         <li><a href="#">Facebook</a></li>
         <li><a href="#">Linkedin</a></li>
         <li><a href="#">Pinterest</a></li>
         <li><a href="#">YouTube</a></li>
       </ul>
-      <ul>
-        <li>Get to know us</li>
+      <ul class="footer__menu">
+        <li class="f-menu__title">Get to know us</li>
         <li><a href="#">About</a></li>
         <li><a href="#">Policies</a></li>
         <li><a href="#">Careers</a></li>
         <li><a href="#">Press</a></li>
         <li><a href="#">Developers</a></li>
       </ul>
-      <ul>
-        <li>Locations</li>
+      <ul class="footer__menu">
+        <li class="f-menu__title">Locations</li>
         <li><a href="#">Detroit</a></li>
         <li><a href="#">London</a></li>
         <li><a href="#">Florida</a></li>
         <li><a href="#">Las Vegas</a></li>
         <li><a href="#">California</a></li>
       </ul>
-      <div>
-        <span>Our mission</span>
+      <div class="footer__text">
+        <span class="f-menu__title">Our mission</span>
         <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur</p>
       </div>
     </div>
-    <div>
-      <span class="copyrite">Copyright &copy; 2016 @samiralley</span>
+    <div class="footer__bot text_center">
+      <span class="footer__copyrite">Copyright &copy; 2016 @samiralley</span>
     </div>
   </footer>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/modernizr.js"></script>
+  <script src="js/common.js"></script>
 </body>
 </html>
